@@ -3,26 +3,18 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Damas Salon – Friseur & Barber in Neuss. Schnitte, Styling, Farbe, Balayage, Bartpflege und mehr. Jetzt Termin buchen." />
+  <meta name="description" content="Damas Salon – Friseur & Barber in Neuss. Schnitte, Styling, Farbe, Balayage, Bartpflege und mehr. Termin per WhatsApp." />
   <title>Damas Salon – Friseur & Barber in Neuss</title>
-
-  <!--
-    Hinweise zum Anpassen:
-    - Ersetze die Platzhalter (Telefon, E-Mail, Social Links, Rechtstexte) unten.
-    - Für echte Galerie-Bilder: tausche die Bild-URLs in der Galerie-Sektion aus.
-    - Öffnungszeiten / Preise sind leicht editierbar im jeweiligen Abschnitt.
-  -->
 
   <style>
     :root{
-      --bg:#0b0c10;
-      --panel:#11131a;
-      --text:#f2f4f8;
-      --muted:#b7bfcc;
-      --line:rgba(255,255,255,.12);
-      --accent:#d6b25e;
-      --accent2:#6ee7ff;
-      --shadow:0 14px 40px rgba(0,0,0,.45);
+      --bg:#f6f7fb;
+      --panel:#ffffff;
+      --text:#0f172a;
+      --muted:#475569;
+      --line:rgba(15,23,42,.12);
+      --accent:#b88a1b;
+      --shadow:0 18px 45px rgba(2,6,23,.10);
       --radius:18px;
       --max:1120px;
     }
@@ -30,294 +22,142 @@
     html,body{height:100%}
     body{
       margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
       color:var(--text);
       background:
-        radial-gradient(1200px 800px at 10% -10%, rgba(214,178,94,.14), transparent 55%),
-        radial-gradient(900px 600px at 105% 0%, rgba(110,231,255,.10), transparent 55%),
-        linear-gradient(180deg, #07070a, var(--bg));
-      line-height:1.5;
+        radial-gradient(1200px 800px at 10% -10%, rgba(184,138,27,.16), transparent 55%),
+        radial-gradient(900px 600px at 105% 0%, rgba(2,132,199,.10), transparent 55%),
+        linear-gradient(180deg, #ffffff, var(--bg));
+      line-height:1.55;
     }
     a{color:inherit}
     .wrap{max-width:var(--max); margin:0 auto; padding:0 18px}
     .btn{
       display:inline-flex; align-items:center; justify-content:center; gap:.55rem;
-      padding:.85rem 1.05rem; border-radius:14px;
+      padding:.9rem 1.1rem; border-radius:14px;
       border:1px solid var(--line);
-      background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.02));
-      box-shadow:0 10px 28px rgba(0,0,0,.35);
-      text-decoration:none; font-weight:650;
+      background:linear-gradient(180deg, rgba(15,23,42,.04), rgba(15,23,42,.01));
+      box-shadow:0 10px 22px rgba(2,6,23,.08);
+      text-decoration:none; font-weight:700;
       transition:transform .12s ease, border-color .12s ease, background .12s ease;
       cursor:pointer;
+      white-space:nowrap;
     }
-    .btn:hover{transform:translateY(-1px); border-color:rgba(214,178,94,.55)}
+    .btn:hover{transform:translateY(-1px); border-color:rgba(184,138,27,.45)}
     .btn.primary{
-      border-color:rgba(214,178,94,.50);
-      background:linear-gradient(180deg, rgba(214,178,94,.22), rgba(214,178,94,.08));
+      border-color:rgba(184,138,27,.45);
+      background:linear-gradient(180deg, rgba(184,138,27,.22), rgba(184,138,27,.08));
     }
     .chip{
       display:inline-flex; align-items:center; gap:.5rem;
       padding:.45rem .75rem; border-radius:999px;
       border:1px solid var(--line);
-      background:rgba(255,255,255,.04);
+      background:rgba(255,255,255,.65);
       color:var(--muted);
       font-size:.92rem;
     }
 
-    /* Header */
     header{
       position:sticky; top:0; z-index:50;
       backdrop-filter:saturate(1.2) blur(10px);
-      background:rgba(7,7,10,.68);
+      background:rgba(255,255,255,.72);
       border-bottom:1px solid var(--line);
     }
-    .nav{
-      display:flex; align-items:center; justify-content:space-between;
-      padding:14px 0;
-      gap:16px;
+    .nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0; gap:16px;}
+    .brand{display:flex; align-items:center; gap:.9rem; text-decoration:none; min-width:240px;}
+    .logoWrap{
+      width:72px; height:72px;
+      border-radius:18px;
+      background:#ffffff;
+      border:1px solid rgba(15,23,42,.14);
+      box-shadow: 0 14px 28px rgba(2,6,23,.12);
+      display:grid; place-items:center;
+      padding:10px;
     }
-    .brand{
-      display:flex; align-items:center; gap:.75rem;
-      text-decoration:none;
-    }
-    .logo{
-      width:40px; height:40px; border-radius:14px;
-      background:
-        radial-gradient(circle at 30% 30%, rgba(214,178,94,.75), rgba(214,178,94,.10) 58%),
-        linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,.02));
-      border:1px solid rgba(214,178,94,.40);
-      box-shadow:0 10px 28px rgba(0,0,0,.35);
-    }
+    .logoWrap img{width:100%; height:100%; object-fit:contain; display:block;}
     .brand b{letter-spacing:.2px}
-    .links{
-      display:flex; align-items:center; gap:14px;
-    }
+    .tag{color:var(--muted); font-size:.92rem}
+    .links{display:flex; align-items:center; gap:14px;}
     .links a{
-      text-decoration:none;
-      color:var(--muted);
-      padding:.35rem .55rem;
-      border-radius:10px;
+      text-decoration:none; color:var(--muted);
+      padding:.35rem .55rem; border-radius:10px;
       border:1px solid transparent;
       transition:border-color .12s ease, color .12s ease, background .12s ease;
-      font-weight:600;
-      font-size:.98rem;
-      white-space:nowrap;
+      font-weight:650; font-size:.98rem; white-space:nowrap;
     }
-    .links a:hover{
-      color:var(--text);
-      border-color:var(--line);
-      background:rgba(255,255,255,.04);
-    }
-    .menuBtn{
-      display:none;
-      padding:.65rem .85rem;
-      border-radius:12px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.04);
-      color:var(--text);
-      font-weight:700;
-    }
+    .links a:hover{color:var(--text); border-color:var(--line); background:rgba(15,23,42,.03);}
+    .menuBtn{display:none; padding:.65rem .85rem; border-radius:12px; border:1px solid var(--line); background:rgba(255,255,255,.75); color:var(--text); font-weight:800;}
 
-    /* Hero */
-    .hero{
-      padding:44px 0 18px;
-    }
-    .heroGrid{
-      display:grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap:22px;
-      align-items:stretch;
-    }
-    .card{
-      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-    }
+    .hero{padding:46px 0 18px;}
+    .heroGrid{display:grid; grid-template-columns: 1.12fr .88fr; gap:22px; align-items:stretch;}
+    .card{background:rgba(255,255,255,.82); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow);}
     .heroMain{padding:28px}
-    .kicker{
-      display:flex; flex-wrap:wrap; gap:10px;
-      margin-bottom:14px;
-    }
-    h1{
-      font-size: clamp(2.05rem, 4.4vw, 3.2rem);
-      line-height:1.1;
-      margin:0 0 12px;
-      letter-spacing:-.6px;
-    }
-    .sub{
-      color:var(--muted);
-      font-size:1.08rem;
-      margin:0 0 18px;
-      max-width:65ch;
-    }
+    .kicker{display:flex; flex-wrap:wrap; gap:10px; margin-bottom:14px;}
+    h1{font-size: clamp(2.05rem, 4.4vw, 3.2rem); line-height:1.08; margin:0 0 12px; letter-spacing:-.6px;}
+    .sub{color:var(--muted); font-size:1.08rem; margin:0 0 18px; max-width:65ch;}
     .heroActions{display:flex; flex-wrap:wrap; gap:10px; margin-top:18px}
     .heroAside{padding:18px}
-    .asideTop{
-      padding:18px; border-bottom:1px solid var(--line);
-      display:flex; flex-direction:column; gap:10px;
-    }
-    .statRow{
-      display:grid; grid-template-columns: 1fr 1fr;
-      gap:12px;
-      padding:14px 18px 18px;
-    }
-    .stat{
-      padding:14px; border-radius:16px;
-      border:1px solid var(--line);
-      background:rgba(0,0,0,.18);
-    }
+    .asideTop{padding:18px; border-bottom:1px solid var(--line); display:flex; flex-direction:column; gap:10px;}
+    .statRow{display:grid; grid-template-columns: 1fr 1fr; gap:12px; padding:14px 18px 18px;}
+    .stat{padding:14px; border-radius:16px; border:1px solid var(--line); background:rgba(15,23,42,.02);}
     .stat b{display:block; font-size:1.05rem}
     .stat span{color:var(--muted); font-size:.95rem}
     .divider{height:1px; background:var(--line); margin:18px 0}
 
-    /* Sections */
     section{padding:28px 0}
-    .sectionHead{
-      display:flex; align-items:flex-end; justify-content:space-between;
-      gap:16px; margin-bottom:14px;
-    }
-    .sectionHead h2{
-      margin:0;
-      font-size:1.65rem;
-      letter-spacing:-.25px;
-    }
+    .sectionHead{display:flex; align-items:flex-end; justify-content:space-between; gap:16px; margin-bottom:14px;}
+    .sectionHead h2{margin:0; font-size:1.65rem; letter-spacing:-.25px;}
     .sectionHead p{margin:0; color:var(--muted); max-width:70ch}
-    .grid3{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap:14px;
-    }
-    .grid2{
-      display:grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap:14px;
-    }
+    .grid3{display:grid; grid-template-columns: repeat(3, 1fr); gap:14px;}
+    .grid2{display:grid; grid-template-columns: repeat(2, 1fr); gap:14px;}
     .p18{padding:18px}
-    .icon{
-      width:44px; height:44px; border-radius:16px;
-      border:1px solid rgba(214,178,94,.35);
-      background:linear-gradient(180deg, rgba(214,178,94,.18), rgba(214,178,94,.06));
-      display:grid; place-items:center;
-      font-weight:900;
-      color:var(--accent);
-    }
+    .icon{width:44px; height:44px; border-radius:16px; border:1px solid rgba(184,138,27,.28); background:linear-gradient(180deg, rgba(184,138,27,.16), rgba(184,138,27,.06)); display:grid; place-items:center; font-weight:900; color:var(--accent);}
     .service h3{margin:10px 0 6px; font-size:1.12rem}
     .service p{margin:0; color:var(--muted)}
-    .list{
-      margin:10px 0 0;
-      padding-left:18px;
-      color:var(--muted);
-    }
-    .priceTable{
-      width:100%;
-      border-collapse:separate;
-      border-spacing:0;
-      overflow:hidden;
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      background:rgba(255,255,255,.03);
-    }
-    .priceTable th,.priceTable td{
-      padding:12px 14px;
-      border-bottom:1px solid var(--line);
-      vertical-align:top;
-    }
-    .priceTable th{
-      text-align:left;
-      color:var(--muted);
-      font-weight:700;
-      background:rgba(255,255,255,.03);
-    }
-    .priceTable tr:last-child td{border-bottom:none}
-    .tag{color:var(--muted); font-size:.92rem}
-    .gallery{
-      display:grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap:10px;
-    }
-    .gallery img{
-      width:100%;
-      height:170px;
-      object-fit:cover;
-      border-radius:16px;
-      border:1px solid var(--line);
-      filter:saturate(1.05) contrast(1.02);
-      transition:transform .14s ease, border-color .14s ease;
-    }
-    .gallery img:hover{transform:translateY(-2px); border-color:rgba(214,178,94,.55)}
-    .gallery .wide{grid-column:span 3}
-    .gallery .tall{grid-column:span 2; height:210px}
-    .quote{
-      padding:18px;
-      border-radius:var(--radius);
-      border:1px solid var(--line);
-      background:rgba(0,0,0,.18);
-    }
-    .quote p{margin:0 0 10px; color:var(--text)}
-    .quote span{color:var(--muted); font-weight:650}
+    .list{margin:10px 0 0; padding-left:18px; color:var(--muted);}
 
-    /* Contact */
-    .contactGrid{
-      display:grid; grid-template-columns: 1fr 1fr;
-      gap:14px;
-      align-items:stretch;
-    }
-    .kv{
-      display:grid; grid-template-columns: 130px 1fr;
-      gap:10px; padding:12px 0;
-      border-bottom:1px dashed rgba(255,255,255,.14);
-    }
+    .priceTable{width:100%; border-collapse:separate; border-spacing:0; overflow:hidden; border:1px solid var(--line); border-radius:var(--radius); background:rgba(255,255,255,.75);}
+    .priceTable th,.priceTable td{padding:12px 14px; border-bottom:1px solid var(--line); vertical-align:top;}
+    .priceTable th{text-align:left; color:var(--muted); font-weight:800; background:rgba(15,23,42,.02);}
+    .priceTable tr:last-child td{border-bottom:none}
+
+    .contactGrid{display:grid; grid-template-columns: 1fr 1fr; gap:14px; align-items:stretch;}
+    .kv{display:grid; grid-template-columns: 170px 1fr; gap:10px; padding:12px 0; border-bottom:1px dashed rgba(15,23,42,.18);}
     .kv:last-child{border-bottom:none}
     .kv b{color:var(--muted)}
-    .map{
-      width:100%; height:330px;
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      overflow:hidden;
-    }
+    .map{width:100%; height:330px; border:1px solid var(--line); border-radius:var(--radius); overflow:hidden;}
     iframe{border:0; width:100%; height:100%}
-    .legal details{
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      background:rgba(255,255,255,.03);
-      padding:14px 16px;
-      margin:10px 0;
-    }
-    .legal summary{cursor:pointer; font-weight:750}
-    .legal p, .legal li{color:var(--muted)}
-    footer{
-      padding:26px 0 40px;
-      border-top:1px solid var(--line);
-      color:var(--muted);
-    }
-    footer .footGrid{
-      display:flex; flex-wrap:wrap; gap:12px; justify-content:space-between; align-items:center;
-    }
 
-    /* Responsive */
+    .legal details{border:1px solid var(--line); border-radius:var(--radius); background:rgba(255,255,255,.82); padding:14px 16px; margin:10px 0; box-shadow:var(--shadow);}
+    .legal summary{cursor:pointer; font-weight:850}
+    .legal p, .legal li{color:var(--muted)}
+
+    footer{padding:26px 0 40px; border-top:1px solid var(--line); color:var(--muted);}
+    footer .footGrid{display:flex; flex-wrap:wrap; gap:12px; justify-content:space-between; align-items:center;}
+
     @media (max-width: 900px){
       .heroGrid{grid-template-columns:1fr}
       .grid3{grid-template-columns:1fr}
       .grid2{grid-template-columns:1fr}
-      .gallery{grid-template-columns: repeat(2, 1fr)}
-      .gallery .wide, .gallery .tall{grid-column:span 2}
       .links{display:none}
       .menuBtn{display:inline-flex}
       .links.mobile{
         display:flex;
         position:absolute;
         left:18px; right:18px;
-        top:66px;
+        top:92px;
         flex-direction:column;
         gap:8px;
         padding:12px;
         border:1px solid var(--line);
         border-radius:16px;
-        background:rgba(7,7,10,.92);
+        background:rgba(255,255,255,.92);
+        box-shadow:var(--shadow);
       }
       .contactGrid{grid-template-columns:1fr}
-      .kv{grid-template-columns: 1fr}
+      .kv{grid-template-columns:1fr}
+      .brand{min-width: unset}
+      .logoWrap{width:66px; height:66px}
     }
   </style>
 </head>
@@ -327,7 +167,9 @@
     <div class="wrap">
       <div class="nav">
         <a class="brand" href="#top" aria-label="Damas Salon Startseite">
-          <span class="logo" aria-hidden="true"></span>
+          <span class="logoWrap">
+            <img src="assets/damas-salon-logo.png" alt="Damas Salon Logo" loading="eager" />
+          </span>
           <div>
             <b>Damas Salon</b><br/>
             <span class="tag">Friseur & Barber · Neuss</span>
@@ -337,29 +179,24 @@
         <nav class="links" aria-label="Navigation">
           <a href="#leistungen">Leistungen</a>
           <a href="#preise">Preise</a>
-          <a href="#galerie">Galerie</a>
-          <a href="#team">Team</a>
           <a href="#kontakt">Kontakt</a>
+          <a href="#rechtliches">Impressum/Datenschutz</a>
         </nav>
 
         <button class="menuBtn" id="menuBtn" aria-expanded="false" aria-controls="mobileNav">Menü</button>
-        <a class="btn primary" href="https://www.planity.com/de-DE/damas-salon-41460-neuss-w09" target="_blank" rel="noreferrer">
-          Termin buchen
-        </a>
+        <a class="btn primary" href="https://wa.me/4915737541554" target="_blank" rel="noreferrer">Termin per WhatsApp</a>
       </div>
 
       <nav class="links mobile" id="mobileNav" aria-label="Mobile Navigation" style="display:none">
         <a href="#leistungen">Leistungen</a>
         <a href="#preise">Preise</a>
-        <a href="#galerie">Galerie</a>
-        <a href="#team">Team</a>
         <a href="#kontakt">Kontakt</a>
+        <a href="#rechtliches">Impressum/Datenschutz</a>
       </nav>
     </div>
   </header>
 
   <main id="top" class="wrap">
-    <!-- HERO -->
     <section class="hero">
       <div class="heroGrid">
         <div class="card heroMain">
@@ -375,9 +212,9 @@
           </p>
 
           <div class="heroActions">
-            <a class="btn primary" href="https://www.planity.com/de-DE/damas-salon-41460-neuss-w09" target="_blank" rel="noreferrer">Online Termin buchen</a>
+            <a class="btn primary" href="https://wa.me/4915737541554" target="_blank" rel="noreferrer">Termin per WhatsApp</a>
+            <a class="btn" href="tel:+4915737541554">Anrufen</a>
             <a class="btn" href="#preise">Preise ansehen</a>
-            <a class="btn" href="#kontakt">Anfahrt & Kontakt</a>
           </div>
 
           <div class="divider"></div>
@@ -389,51 +226,39 @@
             </div>
             <div>
               <b>Öffnungszeiten</b><br/>
-              <span class="tag">Mo–Fr 09:00–18:30 · Sa 09:00–18:00 · So geschlossen</span>
+              <span class="tag">Mo–Fr 10:00–19:00 · Sa 09:00–18:00 · So geschlossen</span>
             </div>
           </div>
         </div>
 
         <aside class="card heroAside" aria-label="Schnellinfos">
           <div class="asideTop">
-            <b>Jetzt schnell starten</b>
-            <span class="tag">Buchen Sie online oder rufen Sie an.</span>
+            <b>Termin & Kontakt</b>
+            <span class="tag">Buchung erfolgt per WhatsApp. Alternativ telefonisch.</span>
             <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:6px;">
-              <a class="btn" href="tel:+4921317537679">Anrufen</a>
-              <a class="btn" href="https://www.instagram.com/damassalon/" target="_blank" rel="noreferrer">Instagram</a>
+              <a class="btn primary" href="https://wa.me/4915737541554" target="_blank" rel="noreferrer">WhatsApp</a>
+              <a class="btn" href="tel:+4915737541554">Tel. mobil</a>
+              <a class="btn" href="tel:+4921317537679">Tel. Festnetz</a>
             </div>
-            <span class="tag" style="opacity:.85">Telefon: +49 2131 7537679 (bei Bedarf anpassen)</span>
+            <span class="tag" style="opacity:.95">WhatsApp / Tel.: +49 1573 7541554</span>
           </div>
           <div class="statRow">
-            <div class="stat">
-              <b>Beratung</b>
-              <span>individuell & kostenfrei</span>
-            </div>
-            <div class="stat">
-              <b>Techniken</b>
-              <span>modern & klassisch</span>
-            </div>
-            <div class="stat">
-              <b>Service</b>
-              <span>termintreu & herzlich</span>
-            </div>
-            <div class="stat">
-              <b>Für Anlässe</b>
-              <span>z. B. Brautfrisur</span>
-            </div>
+            <div class="stat"><b>Beratung</b><span>individuell & kostenfrei</span></div>
+            <div class="stat"><b>Techniken</b><span>modern & klassisch</span></div>
+            <div class="stat"><b>Service</b><span>termintreu & herzlich</span></div>
+            <div class="stat"><b>Für Anlässe</b><span>z. B. Brautfrisur</span></div>
           </div>
         </aside>
       </div>
     </section>
 
-    <!-- LEISTUNGEN -->
     <section id="leistungen">
       <div class="sectionHead">
         <div>
           <h2>Leistungen</h2>
           <p>Ausgewählte Services für Damen, Herren und Kinder – mit Fokus auf Schnitt, Farbe, Pflege und Styling.</p>
         </div>
-        <a class="btn" href="https://www.planity.com/de-DE/damas-salon-41460-neuss-w09" target="_blank" rel="noreferrer">Alle Services buchen</a>
+        <a class="btn" href="https://wa.me/4915737541554" target="_blank" rel="noreferrer">Per WhatsApp anfragen</a>
       </div>
 
       <div class="grid3">
@@ -472,260 +297,138 @@
       </div>
     </section>
 
-    <!-- PREISE -->
     <section id="preise">
       <div class="sectionHead">
         <div>
-          <h2>Preise (Auszug)</h2>
-          <p>Transparente Preisbeispiele – die vollständige Liste und Verfügbarkeiten finden Sie im Online‑Buchungssystem.</p>
+          <h2>Preise</h2>
+          <p>Transparente Preisbeispiele. Preisänderungen vorbehalten. Für Sonderwünsche bitte per WhatsApp anfragen.</p>
         </div>
+        <a class="btn primary" href="https://wa.me/4915737541554" target="_blank" rel="noreferrer">Preis/Termin anfragen</a>
       </div>
 
       <div class="grid2">
         <div class="card p18">
           <b>Herren</b>
           <table class="priceTable" aria-label="Preise Herren">
-            <thead>
-              <tr><th>Leistung</th><th style="text-align:right">Preis</th></tr>
-            </thead>
+            <thead><tr><th>Leistung</th><th style="text-align:right">Preis</th></tr></thead>
             <tbody>
-              <tr><td>Maschinenschnitt <span class="tag">· 15 Min.</span></td><td style="text-align:right">10 €</td></tr>
-              <tr><td>Schneiden + Föhnen + Styling <span class="tag">· 20 Min.</span></td><td style="text-align:right">15 €</td></tr>
-              <tr><td>Waschen + Schneiden + Föhnen + Styling <span class="tag">· 30 Min.</span></td><td style="text-align:right">18 €</td></tr>
-              <tr><td>Bartrasur <span class="tag">· 15 Min.</span></td><td style="text-align:right">ab 10 €</td></tr>
-              <tr><td>Strähnen <span class="tag">· 60 Min.</span></td><td style="text-align:right">ab 35 €</td></tr>
+              <tr><td>Maschinenschnitt <span class="tag">· ca. 15 Min.</span></td><td style="text-align:right">10 €</td></tr>
+              <tr><td>Schneiden + Föhnen + Styling <span class="tag">· ca. 20 Min.</span></td><td style="text-align:right">15 €</td></tr>
+              <tr><td>Waschen + Schneiden + Föhnen + Styling <span class="tag">· ca. 30 Min.</span></td><td style="text-align:right">18 €</td></tr>
+              <tr><td>Bartrasur <span class="tag">· ca. 15 Min.</span></td><td style="text-align:right">ab 10 €</td></tr>
+              <tr><td>Strähnen <span class="tag">· ca. 60 Min.</span></td><td style="text-align:right">ab 35 €</td></tr>
             </tbody>
           </table>
-          <div style="margin-top:12px">
-            <a class="btn" href="https://www.planity.com/de-DE/damas-salon-41460-neuss-w09" target="_blank" rel="noreferrer">Alle Herren‑Leistungen</a>
-          </div>
         </div>
 
         <div class="card p18">
           <b>Damen & Extras</b>
           <table class="priceTable" aria-label="Preise Damen und Extras">
-            <thead>
-              <tr><th>Leistung</th><th style="text-align:right">Preis</th></tr>
-            </thead>
+            <thead><tr><th>Leistung</th><th style="text-align:right">Preis</th></tr></thead>
             <tbody>
-              <tr><td>Waschen + Schneiden (kurz) <span class="tag">· 30 Min.</span></td><td style="text-align:right">22 €</td></tr>
-              <tr><td>Waschen + Schneiden (lang) <span class="tag">· 30 Min.</span></td><td style="text-align:right">ab 32 €</td></tr>
-              <tr><td>Waschen + Schneiden + Föhnen (kurz) <span class="tag">· 30 Min.</span></td><td style="text-align:right">ab 34 €</td></tr>
-              <tr><td>Waschen + Schneiden + Föhnen (lang) <span class="tag">· 30 Min.</span></td><td style="text-align:right">ab 44 €</td></tr>
-              <tr><td>Augenbrauen (Faden) <span class="tag">· 15 Min.</span></td><td style="text-align:right">15 €</td></tr>
-              <tr><td>Brautfrisur <span class="tag">· 2 Std.</span></td><td style="text-align:right">175 €</td></tr>
+              <tr><td>Waschen + Schneiden (kurz) <span class="tag">· ca. 30 Min.</span></td><td style="text-align:right">22 €</td></tr>
+              <tr><td>Waschen + Schneiden (lang) <span class="tag">· ca. 30 Min.</span></td><td style="text-align:right">ab 32 €</td></tr>
+              <tr><td>Waschen + Schneiden + Föhnen (kurz) <span class="tag">· ca. 30 Min.</span></td><td style="text-align:right">ab 34 €</td></tr>
+              <tr><td>Waschen + Schneiden + Föhnen (lang) <span class="tag">· ca. 30 Min.</span></td><td style="text-align:right">ab 44 €</td></tr>
+              <tr><td>Augenbrauen (Faden) <span class="tag">· ca. 15 Min.</span></td><td style="text-align:right">15 €</td></tr>
+              <tr><td>Brautfrisur <span class="tag">· ca. 2 Std.</span></td><td style="text-align:right">175 €</td></tr>
             </tbody>
           </table>
-          <div style="margin-top:12px; display:flex; flex-wrap:wrap; gap:10px">
-            <a class="btn" href="https://www.planity.com/de-DE/damas-salon-41460-neuss-w09" target="_blank" rel="noreferrer">Alle Damen‑Leistungen</a>
-            <a class="btn" href="#kontakt">Fragen? Kontakt</a>
-          </div>
         </div>
       </div>
     </section>
 
-    <!-- GALERIE -->
-    <section id="galerie">
-      <div class="sectionHead">
-        <div>
-          <h2>Galerie</h2>
-          <p>Platzhalterbilder – ersetzen Sie diese durch eigene Salon‑Fotos (Innenraum, Vorher/Nachher, Team, Arbeiten).</p>
-        </div>
-      </div>
-
-      <!-- Stockbilder (kostenfrei) – ersetzen -->
-      <div class="gallery" aria-label="Galerie">
-        <img class="wide" src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1200&q=80" alt="Salon Innenraum" loading="lazy">
-        <img class="wide" src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=1200&q=80" alt="Styling" loading="lazy">
-        <img class="tall" src="https://images.unsplash.com/photo-1522338242992-e1a54906a8da?auto=format&fit=crop&w=1200&q=80" alt="Haarschnitt" loading="lazy">
-        <img class="tall" src="https://images.unsplash.com/photo-1519415943484-9fa1873496d4?auto=format&fit=crop&w=1200&q=80" alt="Barber" loading="lazy">
-        <img class="wide" src="https://images.unsplash.com/photo-1517832207067-4db24a2ae47c?auto=format&fit=crop&w=1200&q=80" alt="Farbe" loading="lazy">
-        <img class="wide" src="https://images.unsplash.com/photo-1559599238-6515970d86d5?auto=format&fit=crop&w=1200&q=80" alt="Brautfrisur" loading="lazy">
-      </div>
-    </section>
-
-    <!-- TEAM -->
-    <section id="team">
-      <div class="sectionHead">
-        <div>
-          <h2>Team</h2>
-          <p>Ein eingespieltes Team mit Blick für Details – und dem Anspruch, dass Sie sich wohlfühlen.</p>
-        </div>
-      </div>
-
-      <div class="grid3">
-        <div class="card p18">
-          <b>Amer</b><br/>
-          <span class="tag">Stylist · Beratung · Schnitt</span>
-          <ul class="list">
-            <li>Individuelle Beratung</li>
-            <li>Moderne Schnitte</li>
-            <li>Saubere Details</li>
-          </ul>
-        </div>
-        <div class="card p18">
-          <b>Naser</b><br/>
-          <span class="tag">Stylist · Farbe · Styling</span>
-          <ul class="list">
-            <li>Farbtechniken</li>
-            <li>Finish & Styling</li>
-            <li>Pflege‑Empfehlungen</li>
-          </ul>
-        </div>
-        <div class="card p18">
-          <b>Mohammed · Rawan · Thome</b><br/>
-          <span class="tag">Team</span>
-          <ul class="list">
-            <li>Service & Termintreue</li>
-            <li>Herren · Damen · Kinder</li>
-            <li>Grooming & Extras</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- STIMMEN -->
-    <section id="stimmen">
-      <div class="sectionHead">
-        <div>
-          <h2>Was Kundinnen & Kunden sagen</h2>
-          <p>Kurze Beispiel‑Zitate (Platzhalter). Ersetzen Sie diese durch echte Bewertungen (mit Einverständnis).</p>
-        </div>
-      </div>
-
-      <div class="grid3">
-        <div class="quote">
-          <p>„Sehr professionell, sauber gearbeitet – genau so, wie ich es wollte.“</p>
-          <span>– Kunde</span>
-        </div>
-        <div class="quote">
-          <p>„Freundliche Beratung und ein Ergebnis, das wirklich zu mir passt.“</p>
-          <span>– Kundin</span>
-        </div>
-        <div class="quote">
-          <p>„Top Bartkonturen und entspannte Atmosphäre. Komme wieder.“</p>
-          <span>– Kunde</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- KONTAKT -->
     <section id="kontakt">
       <div class="sectionHead">
         <div>
           <h2>Kontakt & Anfahrt</h2>
-          <p>Rufen Sie an, buchen Sie online oder schreiben Sie uns. Die Karte führt Sie direkt zur Michaelstraße 71–73.</p>
+          <p>Schreiben Sie uns per WhatsApp für Termine. Alternativ erreichen Sie uns telefonisch oder per E‑Mail.</p>
         </div>
         <div style="display:flex; flex-wrap:wrap; gap:10px">
-          <a class="btn primary" href="https://www.planity.com/de-DE/damas-salon-41460-neuss-w09" target="_blank" rel="noreferrer">Termin buchen</a>
-          <a class="btn" href="tel:+4921317537679">Anrufen</a>
+          <a class="btn primary" href="https://wa.me/4915737541554" target="_blank" rel="noreferrer">Termin per WhatsApp</a>
+          <a class="btn" href="tel:+4915737541554">Tel. mobil</a>
         </div>
       </div>
 
       <div class="contactGrid">
         <div class="card p18">
           <div class="kv"><b>Adresse</b><span>Michaelstraße 71–73, 41460 Neuss</span></div>
-          <div class="kv"><b>Telefon</b><span><a href="tel:+4921317537679">+49 2131 7537679</a> <span class="tag">(bitte prüfen)</span></span></div>
-          <div class="kv"><b>E‑Mail</b><span><a href="mailto:info@damassalon.de">info@damassalon.de</a> <span class="tag">(Platzhalter)</span></span></div>
-          <div class="kv"><b>Öffnungszeiten</b><span>Mo–Fr 09:00–18:30 · Sa 09:00–18:00 · So geschlossen</span></div>
+          <div class="kv"><b>WhatsApp / Tel.</b><span><a href="tel:+4915737541554">+49 1573 7541554</a></span></div>
+          <div class="kv"><b>Festnetz</b><span><a href="tel:+4921317537679">+49 2131 7537679</a></span></div>
+          <div class="kv"><b>E‑Mail</b><span><a href="mailto:info@damassalon.de">info@damassalon.de</a></span></div>
+          <div class="kv"><b>Öffnungszeiten</b><span>Mo–Fr 10:00–19:00 · Sa 09:00–18:00 · So geschlossen</span></div>
 
           <div style="margin-top:14px; display:flex; flex-wrap:wrap; gap:10px">
-            <a class="btn" href="https://www.instagram.com/damassalon/" target="_blank" rel="noreferrer">Instagram</a>
-            <a class="btn" href="https://www.google.com/maps?q=Michaelstra%C3%9Fe%2071-73,%2041460%20Neuss" target="_blank" rel="noreferrer">In Google Maps öffnen</a>
+            <a class="btn" href="https://wa.me/4915737541554" target="_blank" rel="noreferrer">WhatsApp</a>
+            <a class="btn" href="https://www.facebook.com/profile.php?id=100054981410641" target="_blank" rel="noreferrer">Facebook</a>
+            <a class="btn" href="https://www.tiktok.com/@damassalon?_r=1&_t=ZG-92p40LMu1TM" target="_blank" rel="noreferrer">TikTok</a>
+            <a class="btn" href="https://maps.app.goo.gl/cSq5j6qDpCyaab5j9?g_st=ipc" target="_blank" rel="noreferrer">Google Maps</a>
           </div>
-
-          <div class="divider"></div>
-
-          <form id="kontaktForm" onsubmit="return false;">
-            <b>Kurznachricht</b>
-            <p class="tag" style="margin-top:6px">
-              Dieses Formular ist lokal (ohne Backend). Für echtes Versenden: E‑Mail‑Service, Formular‑Backend oder Server‑Script anbinden.
-            </p>
-
-            <div class="grid2" style="margin-top:10px">
-              <div>
-                <label class="tag" for="name">Name</label><br/>
-                <input id="name" name="name" required
-                  style="width:100%; padding:12px 12px; margin-top:6px; border-radius:14px; border:1px solid var(--line); background:rgba(0,0,0,.2); color:var(--text);" />
-              </div>
-              <div>
-                <label class="tag" for="telefon">Telefon (optional)</label><br/>
-                <input id="telefon" name="telefon"
-                  style="width:100%; padding:12px 12px; margin-top:6px; border-radius:14px; border:1px solid var(--line); background:rgba(0,0,0,.2); color:var(--text);" />
-              </div>
-            </div>
-
-            <div style="margin-top:10px">
-              <label class="tag" for="nachricht">Nachricht</label><br/>
-              <textarea id="nachricht" name="nachricht" rows="4" required
-                style="width:100%; padding:12px 12px; margin-top:6px; border-radius:14px; border:1px solid var(--line); background:rgba(0,0,0,.2); color:var(--text); resize:vertical;"></textarea>
-            </div>
-
-            <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:12px">
-              <button class="btn primary" type="submit" id="sendBtn">Nachricht kopieren</button>
-              <a class="btn" href="mailto:info@damassalon.de?subject=Anfrage%20%D0%B0%D1%83%D1%81%20der%20Webseite&body=Hallo%20Damas%20Salon%2C%0A%0A..." id="mailLink">Per E‑Mail senden</a>
-            </div>
-          </form>
         </div>
 
         <div class="map card" aria-label="Karte">
-          <iframe
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
+          <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade"
             src="https://www.google.com/maps?q=Michaelstra%C3%9Fe%2071-73,%2041460%20Neuss&output=embed">
           </iframe>
         </div>
       </div>
     </section>
 
-    <!-- LEGAL -->
     <section class="legal" id="rechtliches">
       <div class="sectionHead">
         <div>
-          <h2>Impressum & Datenschutz (Vorlage)</h2>
-          <p>Pflichtangaben variieren je nach Rechtsform. Bitte durch Ihre echten Daten ersetzen und ggf. juristisch prüfen lassen.</p>
+          <h2>Impressum & Datenschutz</h2>
         </div>
       </div>
 
-      <details>
+      <details open>
         <summary>Impressum</summary>
-        <p><b>Damas Salon</b><br/>
+        <p><b>Angaben gemäß § 5 TMG</b></p>
+        <p>
+          <b>Damas Salon</b><br/>
           Michaelstraße 71–73<br/>
           41460 Neuss<br/>
           Deutschland
         </p>
         <p>
-          <b>Vertreten durch:</b> [Vorname Nachname]<br/>
-          <b>Telefon:</b> +49 2131 7537679<br/>
+          <b>Inhaber / Vertreten durch:</b> Amer Sayed Ali<br/>
+          <b>Telefon (mobil / WhatsApp):</b> +49 1573 7541554<br/>
+          <b>Telefon (Festnetz):</b> +49 2131 7537679<br/>
           <b>E‑Mail:</b> info@damassalon.de
         </p>
-        <p>
-          <b>USt‑IdNr.:</b> [falls vorhanden]<br/>
-          <b>Aufsichtsbehörde / Kammer:</b> [falls erforderlich]<br/>
-        </p>
-        <p class="tag">Hinweis: Dieses Impressum ist eine Vorlage und stellt keine Rechtsberatung dar.</p>
       </details>
 
-      <details>
+      <details open>
         <summary>Datenschutzerklärung</summary>
         <p><b>1. Verantwortlicher</b><br/>
-          Damas Salon, Michaelstraße 71–73, 41460 Neuss, Deutschland<br/>
+          Amer Sayed Ali (Damas Salon)<br/>
+          Michaelstraße 71–73, 41460 Neuss, Deutschland<br/>
           E‑Mail: info@damassalon.de
         </p>
-        <p><b>2. Hosting</b><br/>
-          Diese Website kann bei einem Hosting‑Anbieter betrieben werden. Dabei werden Server‑Logfiles (z. B. IP‑Adresse, Zeitpunkt, User‑Agent) verarbeitet, um die Website bereitzustellen.
+
+        <p><b>2. Hosting (GitHub Pages)</b><br/>
+          Diese Website wird über GitHub Pages bereitgestellt. Beim Aufruf der Website verarbeitet GitHub technisch notwendige Informationen
+          (z. B. IP‑Adresse, Datum/Uhrzeit, abgerufene Seite, Browser‑Informationen), um die Website auszuliefern und die Sicherheit zu gewährleisten.
         </p>
-        <p><b>3. Kontaktaufnahme</b><br/>
-          Wenn Sie uns per E‑Mail kontaktieren, verarbeiten wir Ihre Angaben zur Bearbeitung der Anfrage.
+
+        <p><b>3. Domain/Registrar (United Domains)</b><br/>
+          Die Domain wird über United Domains verwaltet. Bei der Nutzung können technische Daten (z. B. DNS‑Anfragen) verarbeitet werden.
         </p>
-        <p><b>4. Einbindung von Google Maps</b><br/>
-          Diese Website bindet eine Karte von Google ein. Dabei können personenbezogene Daten (z. B. IP‑Adresse) an Google übermittelt werden.
-          Verwenden Sie nur dann eine Karten‑Einbindung, wenn Sie dies datenschutzrechtlich abgedeckt haben (z. B. Einwilligung / Consent‑Management, je nach Setup).
+
+        <p><b>4. Kontaktaufnahme</b><br/>
+          Wenn Sie uns per E‑Mail oder WhatsApp kontaktieren, verarbeiten wir die von Ihnen übermittelten Daten ausschließlich zur Bearbeitung Ihrer Anfrage.
+          Bitte beachten Sie: Bei WhatsApp erfolgt die Kommunikation über einen Drittanbieter; es gelten zusätzlich dessen Datenschutzbestimmungen.
         </p>
-        <p><b>5. Ihre Rechte</b><br/>
-          Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit, Widerspruch sowie Beschwerde bei einer Aufsichtsbehörde.
+
+        <p><b>5. Google Maps</b><br/>
+          Diese Website bindet eine Karte von Google (Google Maps) ein. Dabei kann Ihre IP‑Adresse an Google übermittelt werden.
+          Wenn Sie dies vermeiden möchten, nutzen Sie bitte statt der eingebetteten Karte ausschließlich den externen Google‑Maps‑Link.
         </p>
-        <p class="tag">Hinweis: Diese Datenschutzerklärung ist eine Vorlage und muss an Ihr konkretes Setup (Hosting, Tracking, Tools) angepasst werden.</p>
+
+        <p><b>6. Ihre Rechte</b><br/>
+          Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit sowie Widerspruch.
+          Außerdem steht Ihnen ein Beschwerderecht bei einer Datenschutzaufsichtsbehörde zu.
+        </p>
       </details>
     </section>
   </main>
@@ -735,12 +438,13 @@
       <div class="footGrid">
         <div>
           <b style="color:var(--text)">Damas Salon</b><br/>
-          <span class="tag">Michaelstraße 71–73 · 41460 Neuss</span>
+          <span class="tag">Michaelstraße 71–73 · 41460 Neuss</span><br/>
+          <span class="tag">Mo–Fr 10:00–19:00 · Sa 09:00–18:00 · So geschlossen</span>
         </div>
         <div style="display:flex; flex-wrap:wrap; gap:10px">
           <a class="btn" href="#top">Nach oben</a>
           <a class="btn" href="#rechtliches">Impressum/Datenschutz</a>
-          <a class="btn primary" href="https://www.planity.com/de-DE/damas-salon-41460-neuss-w09" target="_blank" rel="noreferrer">Termin buchen</a>
+          <a class="btn primary" href="https://wa.me/4915737541554" target="_blank" rel="noreferrer">WhatsApp</a>
         </div>
       </div>
       <p style="margin-top:14px" class="tag">© <span id="year"></span> Damas Salon. Alle Rechte vorbehalten.</p>
@@ -748,7 +452,6 @@
   </footer>
 
   <script>
-    // Mobile Nav
     const menuBtn = document.getElementById('menuBtn');
     const mobileNav = document.getElementById('mobileNav');
     if(menuBtn && mobileNav){
@@ -762,48 +465,7 @@
         menuBtn.setAttribute('aria-expanded', 'false');
       }));
     }
-
-    // Footer year
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // "Nachricht kopieren" helper
-    const sendBtn = document.getElementById('sendBtn');
-    const mailLink = document.getElementById('mailLink');
-    const form = document.getElementById('kontaktForm');
-
-    function buildMessage(){
-      const name = (document.getElementById('name').value || '').trim();
-      const tel = (document.getElementById('telefon').value || '').trim();
-      const msg = (document.getElementById('nachricht').value || '').trim();
-      const lines = [
-        `Name: ${name}`,
-        tel ? `Telefon: ${tel}` : null,
-        '',
-        msg
-      ].filter(Boolean).join('\n');
-      return lines;
-    }
-
-    if(sendBtn && form){
-      sendBtn.addEventListener('click', async () => {
-        const text = buildMessage();
-        try{
-          await navigator.clipboard.writeText(text);
-          sendBtn.textContent = 'Kopiert';
-          setTimeout(()=> sendBtn.textContent='Nachricht kopieren', 1400);
-        }catch(e){
-          alert('Kopieren nicht möglich. Bitte Text manuell kopieren.');
-        }
-      });
-    }
-
-    if(mailLink){
-      form.addEventListener('input', () => {
-        const subject = encodeURIComponent('Anfrage über die Webseite');
-        const body = encodeURIComponent(buildMessage());
-        mailLink.href = `mailto:info@damassalon.de?subject=${subject}&body=${body}`;
-      });
-    }
   </script>
 </body>
 </html>
